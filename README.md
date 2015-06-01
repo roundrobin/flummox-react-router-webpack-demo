@@ -1,19 +1,19 @@
 # Flummox Demo App
 
 
-## Install
+## Install dependencies
 
-To build the app run 
+Install the two following global node modules for ease.
 
 ```bash
-	$ npm install -g webpack
-	$ npm install -g webpack-dev-server
+$ npm install -g webpack
+$ npm install -g webpack-dev-server
 ```
 
-To build the app and run a simple Http server running on port 8123 (configured in webpack.config.js) run:
+To build the app and run a simple Http server running on port `8123` (configured in webpack.config.js) run:
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 
 Then go to `http://localhost:8123` in your browser
