@@ -1,0 +1,47 @@
+/*
+* Main.scss
+*
+*/
+
+// ======================================
+//
+// Import 3rd pary files or frameworks/libraries
+//
+// ======================================
+@import "vendors/bourbon/bourbon";
+@import "vendors/normalize";
+// ======================================
+//
+// Base Styles
+//
+// ======================================
+//
+// Makes sure all the CSS divs work with box-sizing "border-box"
+//
+@import "base/base";
+//
+// Defines how the list view and conversation are positioned on the site
+//
+@import "base/layout";
+
+
+header{
+	background: rgba(black, 0.5);
+	padding: 20px;
+}
+
+body{
+	background: white;
+}
+
+.page{
+	padding: 20px;
+}
+
+
+.link{
+	margin-right: 20px;
+	&:hover{
+		color: yellow;
+	}
+}
