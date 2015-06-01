@@ -10,7 +10,12 @@ $ npm install -g webpack
 $ npm install -g webpack-dev-server
 ```
 
-To build the app assets (bundle.js) 
+Next install the local dependencies:
+```bash
+$ npm install -d
+```
+
+And finally build the app assets (bundle.js and main.css) 
 
 ```bash
 $ npm run dev
@@ -33,4 +38,4 @@ Then go to `http://localhost:8123` in your browser
 ## App
 
 The app show how stores and actions along with react-router work together. For the
-p
+purpose of the demo, we implement a room store.

@@ -14,7 +14,7 @@ var plugins = [
 module.exports = {
     entry: "./static/js/main.jsx",
     output: {
-        filename: "static/build/js/bundle.dev.js",
+        filename: "static/build/js/bundle.js",
         path: __dirname
     },
     module: {
