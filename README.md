@@ -10,7 +10,18 @@ $ npm install -g webpack
 $ npm install -g webpack-dev-server
 ```
 
-To build the app and run a simple Http server running on port `8123` (configured in webpack.config.js) run:
+To build the app assets (bundle.js) 
+
+```bash
+$ npm run dev
+```
+
+
+
+## Run demo server
+
+To run a simple Http server running on port `8123` (configured in webpack.config.js) 
+run: 
 
 ```bash
 $ npm run dev
@@ -19,6 +30,7 @@ $ npm run dev
 Then go to `http://localhost:8123` in your browser
 
 
-## Run demo server
+## App
 
-Use a simple static asset serving server: `python -m SimpleHTTPServer`
+The app show how stores and actions along with react-router work together. For the
+p
