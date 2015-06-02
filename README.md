@@ -1,6 +1,6 @@
 # Flummox Demo App
 
-This demo app uses `Flummox` as a Flux implementation and `React` in conjunction with `react-router`. It's goal is to show how to use Flux in modern web apps.
+This demo app uses `Flummox` as a Flux implementation and `React` in conjunction with the `react-router` component. It's goal is to show how to use Flux in modern web apps.
 
 
 ## Install dependencies
@@ -51,6 +51,14 @@ all active rooms. Based on that data we implement a couple of views visualizing 
 * Show how to use Ajax requests in Flux
 * Show how to use WebSockets in Flux
 * Show how to use Localstorage in Flux
+* Show how to use connectStores in Flummox.
+* Show how to use Flummox with HoC (Higher-order Flux Component)
+
+
+## Resources
+
+[http://acdlite.github.io/flummox](Flummox Documentation)
+[https://github.com/acdlite/flummox-isomorphic-demo](Isomorphic Flummox Demo App)
 
 
 ## Feedback
