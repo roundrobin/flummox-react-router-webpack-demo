@@ -1,5 +1,7 @@
 # Flummox Demo App
 
+The app uses `Flummox` as a Flux implementation and `React` in conjunction with `react-router`.
+
 
 ## Install dependencies
 
