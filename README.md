@@ -23,8 +23,6 @@ And finally build the app assets (bundle.js and main.css)
 $ npm run dev
 ```
 
-
-
 ## Run demo server
 
 To run a simple http server (runs on port `8123` and be configured in webpack.config.js) 
@@ -52,3 +50,10 @@ all active rooms. Based on that data we implement a couple of views visualizing 
 
 * Show how to use Ajax requests in Flux
 * Show how to use WebSockets in Flux
+* Show how to use Localstorage in Flux
+
+
+## Feedback
+
+If you have any questions or there is something you would like to see in the demo 
+app, just open an issue and I will try add it.
