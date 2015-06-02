@@ -1,10 +1,7 @@
 //==============================================================================
 // External dependencies
 //==============================================================================
-import {
-    Store
-}
-from 'flummox';
+import { Store } from 'flummox';
 import Immutable from 'immutable';
 import logger from 'bragi-browser';
 //==============================================================================
