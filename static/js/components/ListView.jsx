@@ -35,15 +35,14 @@ let ListView = React.createClass({
       return <div className={"list-item"} key={i}>{room.title}</div>
     });
 
-
     return (<div className="list-view">
         <h1>List view</h1>  
-        <button onClick={this._clickButton}>Add random room</button>
+        <button className={"btn"} onClick={this._clickButton}>Add random room</button>
         <br/>
         <br/>
-
-        {roomsList}
-
+        <div className={"list-wrapper"}>
+          {roomsList}
+        </div>
       </div>);
     }
 });

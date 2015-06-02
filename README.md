@@ -25,7 +25,7 @@ $ npm run dev
 
 ## Run demo server
 
-To run a simple Http server running on port `8123` (configured in webpack.config.js) 
+To run a simple http server (runs on port `8123` and be configured in webpack.config.js) 
 run: 
 
 ```bash
@@ -37,5 +37,12 @@ Then go to `http://localhost:8123` in your browser
 
 ## App
 
-The app show how stores and actions along with react-router work together. For the
-purpose of the demo, we implement a room store.
+The app shows how stores and actions works along with the react-router component. For the
+purpose of the demo, we implement a rooms store. Which show a list of chat rooms.
+
+
+
+## TODOs
+
+* Show how to use Ajax requests in Flux
+* Show how to use WebSockets in Flux
