@@ -9,9 +9,14 @@ import { Actions } from 'flummox';
 //==============================================================================
 export default class RoomsActions extends Actions {
 
-    addRandomRoom(roomData) {
-    	logger.log("RoomActions:addRandomRoom", "called...");
-	    return roomData;
+    addRandomRoom(room) {
+    	logger.log("RoomActions:addRandomRoom", "called...", room);
+	    return room;
+  	}
+
+  	openRoom(room){
+  		logger.log("RoomActions:openRoom", "called...", room);
+  		return room;	
   	}
 
 

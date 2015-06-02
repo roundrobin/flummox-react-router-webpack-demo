@@ -7,9 +7,6 @@ import logger from 'bragi-browser';
 //==============================================================================
 // Module definition
 //==============================================================================
-
-
-
 export default class RoomsStore extends Store {
 
   constructor(flux) {
@@ -18,9 +15,11 @@ export default class RoomsStore extends Store {
     let roomsActionIds = flux.getActionIds('rooms');
 
     this.register(roomsActionIds.addRandomRoom, this.handleNewTodo);
+    this.register(roomsActionIds.openRoom, this.handleNewActiveRoom);
     
     this.state = {
-      rooms: []
+      rooms: {},
+      activeRooms: {}
     };
   }
 
@@ -28,10 +27,19 @@ export default class RoomsStore extends Store {
       return this.state.rooms[roomId];
   }  
 
+  handleNewActiveRoom(room) {
+    logger.log("RoomsStore:handleNewActiveRoom", "called...", room);
+    this.state.activeRooms[room.id] = room;
+      
+      this.setState({
+        activeRooms: this.state.activeRooms
+      });
+  }
+
   handleNewTodo(roomData) {
       logger.log("RoomsStore:handleNewTodo", "called...");
       
-      this.state.rooms.push(roomData);
+      this.state.rooms[roomData.id] = roomData;
 
       this.setState({
         rooms: this.state.rooms
@@ -40,6 +48,10 @@ export default class RoomsStore extends Store {
 
   getRooms() {
       return this.state.rooms;
+  }  
+
+  getActiveRooms() {
+      return this.state.activeRooms;
   }  
 
  
