@@ -57,9 +57,8 @@ all active rooms. Based on that data we implement a couple of views visualizing 
 
 ## Resources
 
-[Flummox Documentation](http://acdlite.github.io/flummox)
-
-[Isomorphic Flummox Demo App](https://github.com/acdlite/flummox-isomorphic-demo)
+* [Flummox Documentation](http://acdlite.github.io/flummox)
+* [Isomorphic Flummox Demo App](https://github.com/acdlite/flummox-isomorphic-demo)
 
 
 ## Feedback
