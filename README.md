@@ -41,10 +41,7 @@ Then go to `http://localhost:8123` in your browser
 
 This demo app shows how stores and actions work in conjunction with the react-router component. For the
 purpose of the demo, we implement a chat room store,  which holds the data of all rooms and a list of
-all active rooms
-
-
- And show a list of chat rooms.
+all active rooms. Based on that data we implement a couple of views visualizing lists and chat rooms.
 
 
 
