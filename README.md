@@ -1,6 +1,6 @@
 # Flummox Demo App
 
-The app uses `Flummox` as a Flux implementation and `React` in conjunction with `react-router`.
+This demo app uses `Flummox` as a Flux implementation and `React` in conjunction with `react-router`.
 
 
 ## Install dependencies
@@ -39,10 +39,17 @@ Then go to `http://localhost:8123` in your browser
 
 ## App
 
-The app shows how stores and actions works along with the react-router component. For the
-purpose of the demo, we implement a rooms store. Which show a list of chat rooms.
+This demo app shows how stores and actions work in conjunction with the react-router component. For the
+purpose of the demo, we implement a chat room store,  which holds the data of all rooms and a list of
+all active rooms
 
 
+ And show a list of chat rooms.
+
+
+
+## Not included
+* Isomorphic setup (no server side rendering)
 
 ## TODOs
 
