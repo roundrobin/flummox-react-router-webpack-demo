@@ -53,6 +53,10 @@ header{
 	height: calc(100vh - #{$header-height});
 }
 
+.home-view{
+	padding: 10px;
+}
+
 .room-list{
 	@include position(absolute, 0 auto auto 0);
 	width: $room-list-width;
@@ -63,7 +67,7 @@ header{
 	
 }
 
-.room-list-wrapper{
+.animated-list{
 	&:empty{
 
 		&:after{
@@ -112,6 +116,17 @@ header{
 
 .room-enter-leave{
 	opacity: 1;
+}
+
+
+h1.u-inline{
+	margin: 0px;
+	margin-right: 20px;
+}
+
+
+.u-inline{
+	display: inline-block;
 }
 
 

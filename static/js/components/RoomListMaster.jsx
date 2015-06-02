@@ -2,31 +2,37 @@
 // External dependencies
 //==============================================================================
 import React from 'react/addons';
-import { RouteHandler, Link } from 'react-router';
+import { RouteHandler, Link, Navigation } from 'react-router';
 import logger from 'bragi-browser';
 import {FluxComponent} from 'flummox/component'
 import FluxMixin from 'flummox/mixin';
 
 //==============================================================================
+// External dependencies
+//==============================================================================
+//==============================================================================
 // Configs
 //==============================================================================
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
 //==============================================================================
 // Module definition
 //==============================================================================
-let ListView = React.createClass({
-  mixins: [FluxMixin({
+let RoomListMaster = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.func
+  },
+  mixins: [Navigation, FluxMixin({
         rooms: store => ({
-            rooms: store.getRooms(),
-            activeRooms: store.getActiveRooms()
+            rooms: store.getRooms()
         })
   })],
   componentDidMount(){
-    logger.log("ListView:componentDidMount", "props", this.props);
+    logger.log("RoomListMaster:componentDidMount", "props", this.props);
 
   },
   _clickButton: function(){
-    logger.log("ListView:_clickButton", "called");    
+    logger.log("RoomListMaster:_clickButton", "called");    
 
     var id = Math.floor(Math.random()*1000);
     this.props.flux.getActions('rooms').addRandomRoom({
@@ -36,60 +42,43 @@ let ListView = React.createClass({
 
   },
   _openRoom: function(room){
-    logger.log("ListView:render", "called...", room); 
+    //Reponds to a click event on a room list item!
+    logger.log("RoomListMasterTest:render", "called...", room); 
     this.props.flux.getActions('rooms').openRoom(room);  
-      
-  },
+    this.transitionTo('/room/'+room.id);
+  },   
   render() {
     var self = this;
-    logger.log("ListView:render", "state", this.state);
+    logger.log("RoomListMaster:render", "state", this.state);
 
-    var roomsList = Object.keys(this.state.rooms).map(function(roomId, i){
+    //Create list of rooms
+    var roomKeys = Object.keys(this.state.rooms);
+    var roomsList = roomKeys.map(function(roomId, i){
       var room = self.state.rooms[roomId];
-      return <div className={"room-list__item"} 
+      return (<div className={"room-list__item"} 
                   key={i} 
                   title="open chat room"
-                  onClick={self._openRoom.bind(null, room)}
-                  >
+                  onClick={self._openRoom.bind(null, room)}>
                   {room.title}
-              </div>
+              </div>);
     });
-
-    var activeRooms = Object.keys(this.state.activeRooms).map(function(roomId, i){
-        logger.log("ListView:render:activeRooms:each", "Called...", roomId);
-        var room = self.state.activeRooms[roomId];
-        return <div className={"active-rooms__item"} 
-                  key={i} 
-                  onClick={self._openRoom.bind(null, room)}
-                  >
-                  {room.title}
-              </div>
-    });
-
+    //Render the Markup of this component
     return (<div className="list-view">
-        
-        <div className={"room-list"}>
-          <h1>Chat app</h1>  
+         <div className={"room-list"}>
           <button className={"btn"} onClick={this._clickButton}>Add random chat room</button>
           <br/>
           <br/>
           <div className={"room-list-wrapper"}>          
-            <ReactCSSTransitionGroup transitionName="room">
+            <ReactCSSTransitionGroup transitionName="room" className="animated-list">
               {roomsList}
             </ReactCSSTransitionGroup>
           </div>
         </div>
 
-        <div className={"active-rooms"}>
-          {activeRooms}
-        </div>
-
-
-
-
+        <RouteHandler/>
       </div>);
     }
 });
 
 
-export default ListView;
+export default RoomListMaster;

@@ -20,8 +20,9 @@ let AppHandler = React.createClass({
     return (  
         <div>
           <header>
+            <h1 className="u-inline">Chat app</h1>  
             <Link to="home" className="link">Home</Link>
-            <Link to="listViewRooms" params={{type: "poplular"}} className="link">List</Link>
+            <Link to="listViewRooms" params={{type: "poplular"}} className="link">Popular Rooms</Link>
           </header>
           <div className="page">
             <RouteHandler {...this.props}/>

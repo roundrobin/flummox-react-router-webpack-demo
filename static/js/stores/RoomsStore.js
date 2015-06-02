@@ -50,6 +50,12 @@ export default class RoomsStore extends Store {
       return this.state.rooms;
   }  
 
+
+  getActiveRoomById(roomId){
+    logger.log("RoomsStore:getActiveRoomById", "called...", roomId);
+    return this.state.activeRooms[roomId]
+  }
+
   getActiveRooms() {
       return this.state.activeRooms;
   }  
