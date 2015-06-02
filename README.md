@@ -63,5 +63,5 @@ all active rooms. Based on that data we implement a couple of views visualizing 
 
 ## Feedback
 
-If you have any questions or there is something you would like to see in the demo 
-app, just open an issue and I will try add it.
+If you have any questions or if there is something you would like to see in the demo 
+app, just open an issue and I will try to get to it asap.
